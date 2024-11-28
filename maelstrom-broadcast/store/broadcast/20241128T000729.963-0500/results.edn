@@ -1,0 +1,121 @@
+{:perf {:latency-graph {:valid? true},
+        :rate-graph {:valid? true},
+        :valid? true},
+ :timeline {:valid? true},
+ :exceptions {:valid? true},
+ :stats {:valid? false,
+         :count 183,
+         :ok-count 105,
+         :fail-count 0,
+         :info-count 78,
+         :by-f {:broadcast {:valid? false,
+                            :count 78,
+                            :ok-count 0,
+                            :fail-count 0,
+                            :info-count 78},
+                :read {:valid? true,
+                       :count 105,
+                       :ok-count 105,
+                       :fail-count 0,
+                       :info-count 0}}},
+ :availability {:valid? true, :ok-fraction 0.57377046},
+ :net {:all {:send-count 370,
+             :recv-count 370,
+             :msg-count 370,
+             :msgs-per-op 2.021858},
+       :clients {:send-count 370, :recv-count 370, :msg-count 370},
+       :servers {:send-count 0,
+                 :recv-count 0,
+                 :msg-count 0,
+                 :msgs-per-op 0.0},
+       :valid? true},
+ :workload {:worst-stale (),
+            :duplicated-count 0,
+            :valid? :unknown,
+            :lost-count 0,
+            :lost (),
+            :stable-count 0,
+            :stale-count 0,
+            :stale (),
+            :never-read-count 78,
+            :attempt-count 78,
+            :never-read (0
+                         1
+                         2
+                         3
+                         4
+                         5
+                         6
+                         7
+                         8
+                         9
+                         10
+                         11
+                         12
+                         13
+                         14
+                         15
+                         16
+                         17
+                         18
+                         19
+                         20
+                         21
+                         22
+                         23
+                         24
+                         25
+                         26
+                         27
+                         28
+                         29
+                         30
+                         31
+                         32
+                         33
+                         34
+                         35
+                         36
+                         37
+                         38
+                         39
+                         40
+                         41
+                         42
+                         43
+                         44
+                         45
+                         46
+                         47
+                         48
+                         49
+                         50
+                         51
+                         52
+                         53
+                         54
+                         55
+                         56
+                         57
+                         58
+                         59
+                         60
+                         61
+                         62
+                         63
+                         64
+                         65
+                         66
+                         67
+                         68
+                         69
+                         70
+                         71
+                         72
+                         73
+                         74
+                         75
+                         76
+                         77),
+            :duplicated {}},
+ :valid? false}

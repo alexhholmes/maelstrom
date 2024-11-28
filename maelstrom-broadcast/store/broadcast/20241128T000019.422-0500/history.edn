@@ -1,0 +1,416 @@
+{:index 0, :time 12571542, :type :invoke, :process 0, :f :broadcast, :value 0}
+{:index 1, :time 22313834, :type :info, :process 0, :f :broadcast, :value 0, :error [:crash "malformed message"]}
+{:index 2, :time 29077292, :type :invoke, :process 1, :f :broadcast, :value 1}
+{:index 3, :time 30245834, :type :info, :process 1, :f :broadcast, :value 1, :error [:crash "malformed message"]}
+{:index 4, :time 211381417, :type :invoke, :process 2, :f :read, :value nil}
+{:index 5, :time 215587375, :type :ok, :process 2, :f :read, :value []}
+{:index 6, :time 215666500, :type :invoke, :process 2, :f :read, :value nil}
+{:index 7, :time 217507459, :type :ok, :process 2, :f :read, :value []}
+{:index 8, :time 355864542, :type :invoke, :process 2, :f :read, :value nil}
+{:index 9, :time 357175500, :type :ok, :process 2, :f :read, :value []}
+{:index 10, :time 418990625, :type :invoke, :process 2, :f :read, :value nil}
+{:index 11, :time 420288292, :type :ok, :process 2, :f :read, :value []}
+{:index 12, :time 581421709, :type :invoke, :process 2, :f :read, :value nil}
+{:index 13, :time 584366042, :type :ok, :process 2, :f :read, :value []}
+{:index 14, :time 726211792, :type :invoke, :process 2, :f :broadcast, :value 2}
+{:index 15, :time 730959417, :type :info, :process 2, :f :broadcast, :value 2, :error [:crash "malformed message"]}
+{:index 16, :time 744060417, :type :invoke, :process 3, :f :broadcast, :value 3}
+{:index 17, :time 745878584, :type :info, :process 3, :f :broadcast, :value 3, :error [:crash "malformed message"]}
+{:index 18, :time 801087959, :type :invoke, :process 4, :f :read, :value nil}
+{:index 19, :time 802377000, :type :ok, :process 4, :f :read, :value []}
+{:index 20, :time 973400417, :type :invoke, :process 4, :f :broadcast, :value 4}
+{:index 21, :time 977129000, :type :info, :process 4, :f :broadcast, :value 4, :error [:crash "malformed message"]}
+{:index 22, :time 1027427709, :type :invoke, :process 5, :f :broadcast, :value 5}
+{:index 23, :time 1029555375, :type :info, :process 5, :f :broadcast, :value 5, :error [:crash "malformed message"]}
+{:index 24, :time 1184542792, :type :invoke, :process 6, :f :broadcast, :value 6}
+{:index 25, :time 1192139542, :type :info, :process 6, :f :broadcast, :value 6, :error [:crash "malformed message"]}
+{:index 26, :time 1260747209, :type :invoke, :process 7, :f :read, :value nil}
+{:index 27, :time 1262111834, :type :ok, :process 7, :f :read, :value []}
+{:index 28, :time 1351476250, :type :invoke, :process 7, :f :broadcast, :value 7}
+{:index 29, :time 1354566625, :type :info, :process 7, :f :broadcast, :value 7, :error [:crash "malformed message"]}
+{:index 30, :time 1482886375, :type :invoke, :process 8, :f :broadcast, :value 8}
+{:index 31, :time 1486400500, :type :info, :process 8, :f :broadcast, :value 8, :error [:crash "malformed message"]}
+{:index 32, :time 1553581250, :type :invoke, :process 9, :f :read, :value nil}
+{:index 33, :time 1556602875, :type :ok, :process 9, :f :read, :value []}
+{:index 34, :time 1708837250, :type :invoke, :process 9, :f :read, :value nil}
+{:index 35, :time 1712977209, :type :ok, :process 9, :f :read, :value []}
+{:index 36, :time 1826384667, :type :invoke, :process 9, :f :broadcast, :value 9}
+{:index 37, :time 1828405209, :type :info, :process 9, :f :broadcast, :value 9, :error [:crash "malformed message"]}
+{:index 38, :time 1885391917, :type :invoke, :process 10, :f :broadcast, :value 10}
+{:index 39, :time 1886817542, :type :info, :process 10, :f :broadcast, :value 10, :error [:crash "malformed message"]}
+{:index 40, :time 1985009000, :type :invoke, :process 11, :f :broadcast, :value 11}
+{:index 41, :time 1986381917, :type :info, :process 11, :f :broadcast, :value 11, :error [:crash "malformed message"]}
+{:index 42, :time 2105518459, :type :invoke, :process 12, :f :read, :value nil}
+{:index 43, :time 2106774584, :type :ok, :process 12, :f :read, :value []}
+{:index 44, :time 2253918000, :type :invoke, :process 12, :f :read, :value nil}
+{:index 45, :time 2256777834, :type :ok, :process 12, :f :read, :value []}
+{:index 46, :time 2441508417, :type :invoke, :process 12, :f :broadcast, :value 12}
+{:index 47, :time 2445392459, :type :info, :process 12, :f :broadcast, :value 12, :error [:crash "malformed message"]}
+{:index 48, :time 2478902542, :type :invoke, :process 13, :f :read, :value nil}
+{:index 49, :time 2480677084, :type :ok, :process 13, :f :read, :value []}
+{:index 50, :time 2549397875, :type :invoke, :process 13, :f :read, :value nil}
+{:index 51, :time 2550598459, :type :ok, :process 13, :f :read, :value []}
+{:index 52, :time 2650372209, :type :invoke, :process 13, :f :broadcast, :value 13}
+{:index 53, :time 2653349042, :type :info, :process 13, :f :broadcast, :value 13, :error [:crash "malformed message"]}
+{:index 54, :time 2743054125, :type :invoke, :process 14, :f :broadcast, :value 14}
+{:index 55, :time 2746404000, :type :info, :process 14, :f :broadcast, :value 14, :error [:crash "malformed message"]}
+{:index 56, :time 2853405000, :type :invoke, :process 15, :f :broadcast, :value 15}
+{:index 57, :time 2857118084, :type :info, :process 15, :f :broadcast, :value 15, :error [:crash "malformed message"]}
+{:index 58, :time 2886952042, :type :invoke, :process 16, :f :read, :value nil}
+{:index 59, :time 2888273959, :type :ok, :process 16, :f :read, :value []}
+{:index 60, :time 2935155500, :type :invoke, :process 16, :f :broadcast, :value 16}
+{:index 61, :time 2935972542, :type :info, :process 16, :f :broadcast, :value 16, :error [:crash "malformed message"]}
+{:index 62, :time 2955533084, :type :invoke, :process 17, :f :broadcast, :value 17}
+{:index 63, :time 2956268084, :type :info, :process 17, :f :broadcast, :value 17, :error [:crash "malformed message"]}
+{:index 64, :time 3072908292, :type :invoke, :process 18, :f :read, :value nil}
+{:index 65, :time 3074338375, :type :ok, :process 18, :f :read, :value []}
+{:index 66, :time 3169881375, :type :invoke, :process 18, :f :read, :value nil}
+{:index 67, :time 3172309667, :type :ok, :process 18, :f :read, :value []}
+{:index 68, :time 3297965042, :type :invoke, :process 18, :f :read, :value nil}
+{:index 69, :time 3301678125, :type :ok, :process 18, :f :read, :value []}
+{:index 70, :time 3410759292, :type :invoke, :process 18, :f :broadcast, :value 18}
+{:index 71, :time 3413633292, :type :info, :process 18, :f :broadcast, :value 18, :error [:crash "malformed message"]}
+{:index 72, :time 3454405834, :type :invoke, :process 19, :f :broadcast, :value 19}
+{:index 73, :time 3455988959, :type :info, :process 19, :f :broadcast, :value 19, :error [:crash "malformed message"]}
+{:index 74, :time 3490717500, :type :invoke, :process 20, :f :broadcast, :value 20}
+{:index 75, :time 3491840125, :type :info, :process 20, :f :broadcast, :value 20, :error [:crash "malformed message"]}
+{:index 76, :time 3675210542, :type :invoke, :process 21, :f :read, :value nil}
+{:index 77, :time 3677863167, :type :ok, :process 21, :f :read, :value []}
+{:index 78, :time 3810147250, :type :invoke, :process 21, :f :broadcast, :value 21}
+{:index 79, :time 3813852125, :type :info, :process 21, :f :broadcast, :value 21, :error [:crash "malformed message"]}
+{:index 80, :time 3840715334, :type :invoke, :process 22, :f :read, :value nil}
+{:index 81, :time 3842101750, :type :ok, :process 22, :f :read, :value []}
+{:index 82, :time 3957077459, :type :invoke, :process 22, :f :read, :value nil}
+{:index 83, :time 3959471792, :type :ok, :process 22, :f :read, :value []}
+{:index 84, :time 4016657042, :type :invoke, :process 22, :f :read, :value nil}
+{:index 85, :time 4018119250, :type :ok, :process 22, :f :read, :value []}
+{:index 86, :time 4019819834, :type :invoke, :process 22, :f :read, :value nil}
+{:index 87, :time 4020730917, :type :ok, :process 22, :f :read, :value []}
+{:index 88, :time 4120054959, :type :invoke, :process 22, :f :broadcast, :value 22}
+{:index 89, :time 4121566500, :type :info, :process 22, :f :broadcast, :value 22, :error [:crash "malformed message"]}
+{:index 90, :time 4311322917, :type :invoke, :process 23, :f :read, :value nil}
+{:index 91, :time 4314630292, :type :ok, :process 23, :f :read, :value []}
+{:index 92, :time 4422910459, :type :invoke, :process 23, :f :broadcast, :value 23}
+{:index 93, :time 4426121875, :type :info, :process 23, :f :broadcast, :value 23, :error [:crash "malformed message"]}
+{:index 94, :time 4586568459, :type :invoke, :process 24, :f :broadcast, :value 24}
+{:index 95, :time 4590338375, :type :info, :process 24, :f :broadcast, :value 24, :error [:crash "malformed message"]}
+{:index 96, :time 4675363167, :type :invoke, :process 25, :f :broadcast, :value 25}
+{:index 97, :time 4677566084, :type :info, :process 25, :f :broadcast, :value 25, :error [:crash "malformed message"]}
+{:index 98, :time 4860302125, :type :invoke, :process 26, :f :broadcast, :value 26}
+{:index 99, :time 4862659959, :type :info, :process 26, :f :broadcast, :value 26, :error [:crash "malformed message"]}
+{:index 100, :time 4895898792, :type :invoke, :process 27, :f :broadcast, :value 27}
+{:index 101, :time 4897358500, :type :info, :process 27, :f :broadcast, :value 27, :error [:crash "malformed message"]}
+{:index 102, :time 4944080000, :type :invoke, :process 28, :f :read, :value nil}
+{:index 103, :time 4945161875, :type :ok, :process 28, :f :read, :value []}
+{:index 104, :time 4996878542, :type :invoke, :process 28, :f :broadcast, :value 28}
+{:index 105, :time 4998086125, :type :info, :process 28, :f :broadcast, :value 28, :error [:crash "malformed message"]}
+{:index 106, :time 5067949584, :type :invoke, :process 29, :f :read, :value nil}
+{:index 107, :time 5069155959, :type :ok, :process 29, :f :read, :value []}
+{:index 108, :time 5232513042, :type :invoke, :process 29, :f :broadcast, :value 29}
+{:index 109, :time 5234287042, :type :info, :process 29, :f :broadcast, :value 29, :error [:crash "malformed message"]}
+{:index 110, :time 5404909292, :type :invoke, :process 30, :f :read, :value nil}
+{:index 111, :time 5406944125, :type :ok, :process 30, :f :read, :value []}
+{:index 112, :time 5575388792, :type :invoke, :process 30, :f :broadcast, :value 30}
+{:index 113, :time 5578439042, :type :info, :process 30, :f :broadcast, :value 30, :error [:crash "malformed message"]}
+{:index 114, :time 5644141209, :type :invoke, :process 31, :f :broadcast, :value 31}
+{:index 115, :time 5645587459, :type :info, :process 31, :f :broadcast, :value 31, :error [:crash "malformed message"]}
+{:index 116, :time 5783665209, :type :invoke, :process 32, :f :read, :value nil}
+{:index 117, :time 5785062417, :type :ok, :process 32, :f :read, :value []}
+{:index 118, :time 5867579917, :type :invoke, :process 32, :f :read, :value nil}
+{:index 119, :time 5868632750, :type :ok, :process 32, :f :read, :value []}
+{:index 120, :time 6002535959, :type :invoke, :process 32, :f :broadcast, :value 32}
+{:index 121, :time 6003812792, :type :info, :process 32, :f :broadcast, :value 32, :error [:crash "malformed message"]}
+{:index 122, :time 6056104709, :type :invoke, :process 33, :f :read, :value nil}
+{:index 123, :time 6057929792, :type :ok, :process 33, :f :read, :value []}
+{:index 124, :time 6153121834, :type :invoke, :process 33, :f :broadcast, :value 33}
+{:index 125, :time 6154261709, :type :info, :process 33, :f :broadcast, :value 33, :error [:crash "malformed message"]}
+{:index 126, :time 6270500625, :type :invoke, :process 34, :f :broadcast, :value 34}
+{:index 127, :time 6273025000, :type :info, :process 34, :f :broadcast, :value 34, :error [:crash "malformed message"]}
+{:index 128, :time 6276770750, :type :invoke, :process 35, :f :broadcast, :value 35}
+{:index 129, :time 6278178000, :type :info, :process 35, :f :broadcast, :value 35, :error [:crash "malformed message"]}
+{:index 130, :time 6387980625, :type :invoke, :process 36, :f :broadcast, :value 36}
+{:index 131, :time 6391496792, :type :info, :process 36, :f :broadcast, :value 36, :error [:crash "malformed message"]}
+{:index 132, :time 6495122917, :type :invoke, :process 37, :f :read, :value nil}
+{:index 133, :time 6496464334, :type :ok, :process 37, :f :read, :value []}
+{:index 134, :time 6644855250, :type :invoke, :process 37, :f :read, :value nil}
+{:index 135, :time 6646068500, :type :ok, :process 37, :f :read, :value []}
+{:index 136, :time 6713795417, :type :invoke, :process 37, :f :read, :value nil}
+{:index 137, :time 6715004375, :type :ok, :process 37, :f :read, :value []}
+{:index 138, :time 6788976000, :type :invoke, :process 37, :f :broadcast, :value 37}
+{:index 139, :time 6790140417, :type :info, :process 37, :f :broadcast, :value 37, :error [:crash "malformed message"]}
+{:index 140, :time 6822178917, :type :invoke, :process 38, :f :broadcast, :value 38}
+{:index 141, :time 6823517417, :type :info, :process 38, :f :broadcast, :value 38, :error [:crash "malformed message"]}
+{:index 142, :time 6962944084, :type :invoke, :process 39, :f :broadcast, :value 39}
+{:index 143, :time 6964250209, :type :info, :process 39, :f :broadcast, :value 39, :error [:crash "malformed message"]}
+{:index 144, :time 6983951875, :type :invoke, :process 40, :f :read, :value nil}
+{:index 145, :time 6984870334, :type :ok, :process 40, :f :read, :value []}
+{:index 146, :time 7056435334, :type :invoke, :process 40, :f :read, :value nil}
+{:index 147, :time 7057706292, :type :ok, :process 40, :f :read, :value []}
+{:index 148, :time 7137384875, :type :invoke, :process 40, :f :read, :value nil}
+{:index 149, :time 7138266209, :type :ok, :process 40, :f :read, :value []}
+{:index 150, :time 7225445917, :type :invoke, :process 40, :f :broadcast, :value 40}
+{:index 151, :time 7226910292, :type :info, :process 40, :f :broadcast, :value 40, :error [:crash "malformed message"]}
+{:index 152, :time 7385787542, :type :invoke, :process 41, :f :broadcast, :value 41}
+{:index 153, :time 7387712959, :type :info, :process 41, :f :broadcast, :value 41, :error [:crash "malformed message"]}
+{:index 154, :time 7515906167, :type :invoke, :process 42, :f :broadcast, :value 42}
+{:index 155, :time 7519820084, :type :info, :process 42, :f :broadcast, :value 42, :error [:crash "malformed message"]}
+{:index 156, :time 7519919292, :type :invoke, :process 43, :f :broadcast, :value 43}
+{:index 157, :time 7521496084, :type :info, :process 43, :f :broadcast, :value 43, :error [:crash "malformed message"]}
+{:index 158, :time 7646869125, :type :invoke, :process 44, :f :read, :value nil}
+{:index 159, :time 7648184042, :type :ok, :process 44, :f :read, :value []}
+{:index 160, :time 7787442209, :type :invoke, :process 44, :f :read, :value nil}
+{:index 161, :time 7788836250, :type :ok, :process 44, :f :read, :value []}
+{:index 162, :time 7849221834, :type :invoke, :process 44, :f :broadcast, :value 44}
+{:index 163, :time 7850805750, :type :info, :process 44, :f :broadcast, :value 44, :error [:crash "malformed message"]}
+{:index 164, :time 7921574334, :type :invoke, :process 45, :f :read, :value nil}
+{:index 165, :time 7922809417, :type :ok, :process 45, :f :read, :value []}
+{:index 166, :time 8098592125, :type :invoke, :process 45, :f :read, :value nil}
+{:index 167, :time 8099501709, :type :ok, :process 45, :f :read, :value []}
+{:index 168, :time 8142507417, :type :invoke, :process 45, :f :read, :value nil}
+{:index 169, :time 8143233917, :type :ok, :process 45, :f :read, :value []}
+{:index 170, :time 8177350959, :type :invoke, :process 45, :f :broadcast, :value 45}
+{:index 171, :time 8178097250, :type :info, :process 45, :f :broadcast, :value 45, :error [:crash "malformed message"]}
+{:index 172, :time 8352192625, :type :invoke, :process 46, :f :broadcast, :value 46}
+{:index 173, :time 8353527417, :type :info, :process 46, :f :broadcast, :value 46, :error [:crash "malformed message"]}
+{:index 174, :time 8393016209, :type :invoke, :process 47, :f :broadcast, :value 47}
+{:index 175, :time 8394071709, :type :info, :process 47, :f :broadcast, :value 47, :error [:crash "malformed message"]}
+{:index 176, :time 8432327500, :type :invoke, :process 48, :f :read, :value nil}
+{:index 177, :time 8433135375, :type :ok, :process 48, :f :read, :value []}
+{:index 178, :time 8438176625, :type :invoke, :process 48, :f :broadcast, :value 48}
+{:index 179, :time 8438708750, :type :info, :process 48, :f :broadcast, :value 48, :error [:crash "malformed message"]}
+{:index 180, :time 8473449542, :type :invoke, :process 49, :f :broadcast, :value 49}
+{:index 181, :time 8474419292, :type :info, :process 49, :f :broadcast, :value 49, :error [:crash "malformed message"]}
+{:index 182, :time 8536687125, :type :invoke, :process 50, :f :read, :value nil}
+{:index 183, :time 8537432750, :type :ok, :process 50, :f :read, :value []}
+{:index 184, :time 8621645125, :type :invoke, :process 50, :f :broadcast, :value 50}
+{:index 185, :time 8622759625, :type :info, :process 50, :f :broadcast, :value 50, :error [:crash "malformed message"]}
+{:index 186, :time 8815882875, :type :invoke, :process 51, :f :read, :value nil}
+{:index 187, :time 8817425084, :type :ok, :process 51, :f :read, :value []}
+{:index 188, :time 8891129209, :type :invoke, :process 51, :f :broadcast, :value 51}
+{:index 189, :time 8892660500, :type :info, :process 51, :f :broadcast, :value 51, :error [:crash "malformed message"]}
+{:index 190, :time 9010250292, :type :invoke, :process 52, :f :broadcast, :value 52}
+{:index 191, :time 9013459584, :type :info, :process 52, :f :broadcast, :value 52, :error [:crash "malformed message"]}
+{:index 192, :time 9052296000, :type :invoke, :process 53, :f :broadcast, :value 53}
+{:index 193, :time 9053783375, :type :info, :process 53, :f :broadcast, :value 53, :error [:crash "malformed message"]}
+{:index 194, :time 9140464334, :type :invoke, :process 54, :f :broadcast, :value 54}
+{:index 195, :time 9142831834, :type :info, :process 54, :f :broadcast, :value 54, :error [:crash "malformed message"]}
+{:index 196, :time 9298163584, :type :invoke, :process 55, :f :read, :value nil}
+{:index 197, :time 9301344542, :type :ok, :process 55, :f :read, :value []}
+{:index 198, :time 9356244542, :type :invoke, :process 55, :f :read, :value nil}
+{:index 199, :time 9358185875, :type :ok, :process 55, :f :read, :value []}
+{:index 200, :time 9528987125, :type :invoke, :process 55, :f :read, :value nil}
+{:index 201, :time 9532162167, :type :ok, :process 55, :f :read, :value []}
+{:index 202, :time 9726976959, :type :invoke, :process 55, :f :broadcast, :value 55}
+{:index 203, :time 9730844625, :type :info, :process 55, :f :broadcast, :value 55, :error [:crash "malformed message"]}
+{:index 204, :time 9808631875, :type :invoke, :process 56, :f :read, :value nil}
+{:index 205, :time 9811223500, :type :ok, :process 56, :f :read, :value []}
+{:index 206, :time 9986522542, :type :invoke, :process 56, :f :read, :value nil}
+{:index 207, :time 9989408250, :type :ok, :process 56, :f :read, :value []}
+{:index 208, :time 10183933792, :type :invoke, :process 56, :f :read, :value nil}
+{:index 209, :time 10187805375, :type :ok, :process 56, :f :read, :value []}
+{:index 210, :time 10304991542, :type :invoke, :process 56, :f :broadcast, :value 56}
+{:index 211, :time 10308326000, :type :info, :process 56, :f :broadcast, :value 56, :error [:crash "malformed message"]}
+{:index 212, :time 10492640834, :type :invoke, :process 57, :f :broadcast, :value 57}
+{:index 213, :time 10496976750, :type :info, :process 57, :f :broadcast, :value 57, :error [:crash "malformed message"]}
+{:index 214, :time 10514684542, :type :invoke, :process 58, :f :read, :value nil}
+{:index 215, :time 10515594459, :type :ok, :process 58, :f :read, :value []}
+{:index 216, :time 10564075209, :type :invoke, :process 58, :f :broadcast, :value 58}
+{:index 217, :time 10565164792, :type :info, :process 58, :f :broadcast, :value 58, :error [:crash "malformed message"]}
+{:index 218, :time 10615633584, :type :invoke, :process 59, :f :broadcast, :value 59}
+{:index 219, :time 10616980000, :type :info, :process 59, :f :broadcast, :value 59, :error [:crash "malformed message"]}
+{:index 220, :time 10768213250, :type :invoke, :process 60, :f :read, :value nil}
+{:index 221, :time 10769502292, :type :ok, :process 60, :f :read, :value []}
+{:index 222, :time 10949093917, :type :invoke, :process 60, :f :broadcast, :value 60}
+{:index 223, :time 10952335250, :type :info, :process 60, :f :broadcast, :value 60, :error [:crash "malformed message"]}
+{:index 224, :time 11104114959, :type :invoke, :process 61, :f :read, :value nil}
+{:index 225, :time 11107348250, :type :ok, :process 61, :f :read, :value []}
+{:index 226, :time 11278000084, :type :invoke, :process 61, :f :broadcast, :value 61}
+{:index 227, :time 11281383125, :type :info, :process 61, :f :broadcast, :value 61, :error [:crash "malformed message"]}
+{:index 228, :time 11354089917, :type :invoke, :process 62, :f :read, :value nil}
+{:index 229, :time 11356704250, :type :ok, :process 62, :f :read, :value []}
+{:index 230, :time 11487968125, :type :invoke, :process 62, :f :broadcast, :value 62}
+{:index 231, :time 11490920917, :type :info, :process 62, :f :broadcast, :value 62, :error [:crash "malformed message"]}
+{:index 232, :time 11498223750, :type :invoke, :process 63, :f :broadcast, :value 63}
+{:index 233, :time 11499823417, :type :info, :process 63, :f :broadcast, :value 63, :error [:crash "malformed message"]}
+{:index 234, :time 11641860292, :type :invoke, :process 64, :f :broadcast, :value 64}
+{:index 235, :time 11643522125, :type :info, :process 64, :f :broadcast, :value 64, :error [:crash "malformed message"]}
+{:index 236, :time 11783627000, :type :invoke, :process 65, :f :broadcast, :value 65}
+{:index 237, :time 11786553792, :type :info, :process 65, :f :broadcast, :value 65, :error [:crash "malformed message"]}
+{:index 238, :time 11838358625, :type :invoke, :process 66, :f :broadcast, :value 66}
+{:index 239, :time 11840014750, :type :info, :process 66, :f :broadcast, :value 66, :error [:crash "malformed message"]}
+{:index 240, :time 11931252667, :type :invoke, :process 67, :f :read, :value nil}
+{:index 241, :time 11932143084, :type :ok, :process 67, :f :read, :value []}
+{:index 242, :time 11991627750, :type :invoke, :process 67, :f :broadcast, :value 67}
+{:index 243, :time 11992514625, :type :info, :process 67, :f :broadcast, :value 67, :error [:crash "malformed message"]}
+{:index 244, :time 12133685209, :type :invoke, :process 68, :f :read, :value nil}
+{:index 245, :time 12135046542, :type :ok, :process 68, :f :read, :value []}
+{:index 246, :time 12336340084, :type :invoke, :process 68, :f :broadcast, :value 68}
+{:index 247, :time 12339564875, :type :info, :process 68, :f :broadcast, :value 68, :error [:crash "malformed message"]}
+{:index 248, :time 12378916792, :type :invoke, :process 69, :f :broadcast, :value 69}
+{:index 249, :time 12380103625, :type :info, :process 69, :f :broadcast, :value 69, :error [:crash "malformed message"]}
+{:index 250, :time 12429602417, :type :invoke, :process 70, :f :read, :value nil}
+{:index 251, :time 12430433750, :type :ok, :process 70, :f :read, :value []}
+{:index 252, :time 12432113417, :type :invoke, :process 70, :f :broadcast, :value 70}
+{:index 253, :time 12432748125, :type :info, :process 70, :f :broadcast, :value 70, :error [:crash "malformed message"]}
+{:index 254, :time 12635749500, :type :invoke, :process 71, :f :read, :value nil}
+{:index 255, :time 12638623125, :type :ok, :process 71, :f :read, :value []}
+{:index 256, :time 12773021667, :type :invoke, :process 71, :f :broadcast, :value 71}
+{:index 257, :time 12776343625, :type :info, :process 71, :f :broadcast, :value 71, :error [:crash "malformed message"]}
+{:index 258, :time 12816107709, :type :invoke, :process 72, :f :broadcast, :value 72}
+{:index 259, :time 12817401542, :type :info, :process 72, :f :broadcast, :value 72, :error [:crash "malformed message"]}
+{:index 260, :time 12850651500, :type :invoke, :process 73, :f :read, :value nil}
+{:index 261, :time 12851351000, :type :ok, :process 73, :f :read, :value []}
+{:index 262, :time 12908631084, :type :invoke, :process 73, :f :read, :value nil}
+{:index 263, :time 12909256750, :type :ok, :process 73, :f :read, :value []}
+{:index 264, :time 13049107459, :type :invoke, :process 73, :f :broadcast, :value 73}
+{:index 265, :time 13051239500, :type :info, :process 73, :f :broadcast, :value 73, :error [:crash "malformed message"]}
+{:index 266, :time 13082681542, :type :invoke, :process 74, :f :broadcast, :value 74}
+{:index 267, :time 13083978500, :type :info, :process 74, :f :broadcast, :value 74, :error [:crash "malformed message"]}
+{:index 268, :time 13102426084, :type :invoke, :process 75, :f :read, :value nil}
+{:index 269, :time 13103369042, :type :ok, :process 75, :f :read, :value []}
+{:index 270, :time 13172425625, :type :invoke, :process 75, :f :broadcast, :value 75}
+{:index 271, :time 13173285250, :type :info, :process 75, :f :broadcast, :value 75, :error [:crash "malformed message"]}
+{:index 272, :time 13363162084, :type :invoke, :process 76, :f :read, :value nil}
+{:index 273, :time 13364095000, :type :ok, :process 76, :f :read, :value []}
+{:index 274, :time 13525583000, :type :invoke, :process 76, :f :broadcast, :value 76}
+{:index 275, :time 13528111542, :type :info, :process 76, :f :broadcast, :value 76, :error [:crash "malformed message"]}
+{:index 276, :time 13625106417, :type :invoke, :process 77, :f :read, :value nil}
+{:index 277, :time 13628389042, :type :ok, :process 77, :f :read, :value []}
+{:index 278, :time 13684550334, :type :invoke, :process 77, :f :broadcast, :value 77}
+{:index 279, :time 13685651792, :type :info, :process 77, :f :broadcast, :value 77, :error [:crash "malformed message"]}
+{:index 280, :time 13783663042, :type :invoke, :process 78, :f :broadcast, :value 78}
+{:index 281, :time 13784614834, :type :info, :process 78, :f :broadcast, :value 78, :error [:crash "malformed message"]}
+{:index 282, :time 13805353000, :type :invoke, :process 79, :f :broadcast, :value 79}
+{:index 283, :time 13806352167, :type :info, :process 79, :f :broadcast, :value 79, :error [:crash "malformed message"]}
+{:index 284, :time 13852843167, :type :invoke, :process 80, :f :broadcast, :value 80}
+{:index 285, :time 13853621500, :type :info, :process 80, :f :broadcast, :value 80, :error [:crash "malformed message"]}
+{:index 286, :time 13880737084, :type :invoke, :process 81, :f :broadcast, :value 81}
+{:index 287, :time 13881381125, :type :info, :process 81, :f :broadcast, :value 81, :error [:crash "malformed message"]}
+{:index 288, :time 13979085834, :type :invoke, :process 82, :f :read, :value nil}
+{:index 289, :time 13979984667, :type :ok, :process 82, :f :read, :value []}
+{:index 290, :time 14097732917, :type :invoke, :process 82, :f :read, :value nil}
+{:index 291, :time 14099878917, :type :ok, :process 82, :f :read, :value []}
+{:index 292, :time 14277265625, :type :invoke, :process 82, :f :broadcast, :value 82}
+{:index 293, :time 14280310125, :type :info, :process 82, :f :broadcast, :value 82, :error [:crash "malformed message"]}
+{:index 294, :time 14377251209, :type :invoke, :process 83, :f :broadcast, :value 83}
+{:index 295, :time 14380506792, :type :info, :process 83, :f :broadcast, :value 83, :error [:crash "malformed message"]}
+{:index 296, :time 14522560125, :type :invoke, :process 84, :f :read, :value nil}
+{:index 297, :time 14524954667, :type :ok, :process 84, :f :read, :value []}
+{:index 298, :time 14620551417, :type :invoke, :process 84, :f :broadcast, :value 84}
+{:index 299, :time 14622871125, :type :info, :process 84, :f :broadcast, :value 84, :error [:crash "malformed message"]}
+{:index 300, :time 14701750500, :type :invoke, :process 85, :f :read, :value nil}
+{:index 301, :time 14703929834, :type :ok, :process 85, :f :read, :value []}
+{:index 302, :time 14816806209, :type :invoke, :process 85, :f :broadcast, :value 85}
+{:index 303, :time 14819394000, :type :info, :process 85, :f :broadcast, :value 85, :error [:crash "malformed message"]}
+{:index 304, :time 14942897834, :type :invoke, :process 86, :f :read, :value nil}
+{:index 305, :time 14945109834, :type :ok, :process 86, :f :read, :value []}
+{:index 306, :time 14982132459, :type :invoke, :process 86, :f :read, :value nil}
+{:index 307, :time 14983204792, :type :ok, :process 86, :f :read, :value []}
+{:index 308, :time 14996877000, :type :invoke, :process 86, :f :read, :value nil}
+{:index 309, :time 14997568917, :type :ok, :process 86, :f :read, :value []}
+{:index 310, :time 15137688459, :type :invoke, :process 86, :f :broadcast, :value 86}
+{:index 311, :time 15139517459, :type :info, :process 86, :f :broadcast, :value 86, :error [:crash "malformed message"]}
+{:index 312, :time 15203905250, :type :invoke, :process 87, :f :read, :value nil}
+{:index 313, :time 15204804209, :type :ok, :process 87, :f :read, :value []}
+{:index 314, :time 15371732875, :type :invoke, :process 87, :f :broadcast, :value 87}
+{:index 315, :time 15377713125, :type :info, :process 87, :f :broadcast, :value 87, :error [:crash "malformed message"]}
+{:index 316, :time 15394925334, :type :invoke, :process 88, :f :broadcast, :value 88}
+{:index 317, :time 15396682625, :type :info, :process 88, :f :broadcast, :value 88, :error [:crash "malformed message"]}
+{:index 318, :time 15562269625, :type :invoke, :process 89, :f :read, :value nil}
+{:index 319, :time 15564504250, :type :ok, :process 89, :f :read, :value []}
+{:index 320, :time 15648028542, :type :invoke, :process 89, :f :read, :value nil}
+{:index 321, :time 15651167000, :type :ok, :process 89, :f :read, :value []}
+{:index 322, :time 15764234459, :type :invoke, :process 89, :f :read, :value nil}
+{:index 323, :time 15766252167, :type :ok, :process 89, :f :read, :value []}
+{:index 324, :time 15821424917, :type :invoke, :process 89, :f :read, :value nil}
+{:index 325, :time 15822862709, :type :ok, :process 89, :f :read, :value []}
+{:index 326, :time 15943405459, :type :invoke, :process 89, :f :read, :value nil}
+{:index 327, :time 15946000167, :type :ok, :process 89, :f :read, :value []}
+{:index 328, :time 16089201375, :type :invoke, :process 89, :f :broadcast, :value 89}
+{:index 329, :time 16092701375, :type :info, :process 89, :f :broadcast, :value 89, :error [:crash "malformed message"]}
+{:index 330, :time 16248915584, :type :invoke, :process 90, :f :broadcast, :value 90}
+{:index 331, :time 16250026500, :type :info, :process 90, :f :broadcast, :value 90, :error [:crash "malformed message"]}
+{:index 332, :time 16310555292, :type :invoke, :process 91, :f :broadcast, :value 91}
+{:index 333, :time 16311784667, :type :info, :process 91, :f :broadcast, :value 91, :error [:crash "malformed message"]}
+{:index 334, :time 16465031209, :type :invoke, :process 92, :f :read, :value nil}
+{:index 335, :time 16466768542, :type :ok, :process 92, :f :read, :value []}
+{:index 336, :time 16525187542, :type :invoke, :process 92, :f :broadcast, :value 92}
+{:index 337, :time 16525992792, :type :info, :process 92, :f :broadcast, :value 92, :error [:crash "malformed message"]}
+{:index 338, :time 16658298959, :type :invoke, :process 93, :f :broadcast, :value 93}
+{:index 339, :time 16659456042, :type :info, :process 93, :f :broadcast, :value 93, :error [:crash "malformed message"]}
+{:index 340, :time 16707357834, :type :invoke, :process 94, :f :broadcast, :value 94}
+{:index 341, :time 16708195125, :type :info, :process 94, :f :broadcast, :value 94, :error [:crash "malformed message"]}
+{:index 342, :time 16754950750, :type :invoke, :process 95, :f :read, :value nil}
+{:index 343, :time 16756724125, :type :ok, :process 95, :f :read, :value []}
+{:index 344, :time 16876169500, :type :invoke, :process 95, :f :broadcast, :value 95}
+{:index 345, :time 16877650459, :type :info, :process 95, :f :broadcast, :value 95, :error [:crash "malformed message"]}
+{:index 346, :time 17051699125, :type :invoke, :process 96, :f :broadcast, :value 96}
+{:index 347, :time 17056496500, :type :info, :process 96, :f :broadcast, :value 96, :error [:crash "malformed message"]}
+{:index 348, :time 17201154834, :type :invoke, :process 97, :f :read, :value nil}
+{:index 349, :time 17204731625, :type :ok, :process 97, :f :read, :value []}
+{:index 350, :time 17257213625, :type :invoke, :process 97, :f :broadcast, :value 97}
+{:index 351, :time 17259588167, :type :info, :process 97, :f :broadcast, :value 97, :error [:crash "malformed message"]}
+{:index 352, :time 17338060042, :type :invoke, :process 98, :f :read, :value nil}
+{:index 353, :time 17339491750, :type :ok, :process 98, :f :read, :value []}
+{:index 354, :time 17360521125, :type :invoke, :process 98, :f :broadcast, :value 98}
+{:index 355, :time 17361595417, :type :info, :process 98, :f :broadcast, :value 98, :error [:crash "malformed message"]}
+{:index 356, :time 17457383875, :type :invoke, :process 99, :f :read, :value nil}
+{:index 357, :time 17458455959, :type :ok, :process 99, :f :read, :value []}
+{:index 358, :time 17547107542, :type :invoke, :process 99, :f :read, :value nil}
+{:index 359, :time 17548454375, :type :ok, :process 99, :f :read, :value []}
+{:index 360, :time 17576175959, :type :invoke, :process 99, :f :read, :value nil}
+{:index 361, :time 17576889375, :type :ok, :process 99, :f :read, :value []}
+{:index 362, :time 17698928542, :type :invoke, :process 99, :f :read, :value nil}
+{:index 363, :time 17701056459, :type :ok, :process 99, :f :read, :value []}
+{:index 364, :time 17877295000, :type :invoke, :process 99, :f :broadcast, :value 99}
+{:index 365, :time 17880226209, :type :info, :process 99, :f :broadcast, :value 99, :error [:crash "malformed message"]}
+{:index 366, :time 17880403250, :type :invoke, :process 100, :f :read, :value nil}
+{:index 367, :time 17881891584, :type :ok, :process 100, :f :read, :value []}
+{:index 368, :time 17942161292, :type :invoke, :process 100, :f :broadcast, :value 100}
+{:index 369, :time 17945139000, :type :info, :process 100, :f :broadcast, :value 100, :error [:crash "malformed message"]}
+{:index 370, :time 18018380667, :type :invoke, :process 101, :f :read, :value nil}
+{:index 371, :time 18020933042, :type :ok, :process 101, :f :read, :value []}
+{:index 372, :time 18145089167, :type :invoke, :process 101, :f :broadcast, :value 101}
+{:index 373, :time 18148709500, :type :info, :process 101, :f :broadcast, :value 101, :error [:crash "malformed message"]}
+{:index 374, :time 18195136417, :type :invoke, :process 102, :f :read, :value nil}
+{:index 375, :time 18196521542, :type :ok, :process 102, :f :read, :value []}
+{:index 376, :time 18359781542, :type :invoke, :process 102, :f :read, :value nil}
+{:index 377, :time 18363361584, :type :ok, :process 102, :f :read, :value []}
+{:index 378, :time 18393119917, :type :invoke, :process 102, :f :read, :value nil}
+{:index 379, :time 18398319750, :type :ok, :process 102, :f :read, :value []}
+{:index 380, :time 18518920417, :type :invoke, :process 102, :f :read, :value nil}
+{:index 381, :time 18521642542, :type :ok, :process 102, :f :read, :value []}
+{:index 382, :time 18618331792, :type :invoke, :process 102, :f :broadcast, :value 102}
+{:index 383, :time 18622033334, :type :info, :process 102, :f :broadcast, :value 102, :error [:crash "malformed message"]}
+{:index 384, :time 18648879625, :type :invoke, :process 103, :f :read, :value nil}
+{:index 385, :time 18652099209, :type :ok, :process 103, :f :read, :value []}
+{:index 386, :time 18676234500, :type :invoke, :process 103, :f :broadcast, :value 103}
+{:index 387, :time 18678135709, :type :info, :process 103, :f :broadcast, :value 103, :error [:crash "malformed message"]}
+{:index 388, :time 18711913125, :type :invoke, :process 104, :f :broadcast, :value 104}
+{:index 389, :time 18713304209, :type :info, :process 104, :f :broadcast, :value 104, :error [:crash "malformed message"]}
+{:index 390, :time 18832958042, :type :invoke, :process 105, :f :read, :value nil}
+{:index 391, :time 18835121584, :type :ok, :process 105, :f :read, :value []}
+{:index 392, :time 19010591167, :type :invoke, :process 105, :f :read, :value nil}
+{:index 393, :time 19012560834, :type :ok, :process 105, :f :read, :value []}
+{:index 394, :time 19065406792, :type :invoke, :process 105, :f :read, :value nil}
+{:index 395, :time 19067413667, :type :ok, :process 105, :f :read, :value []}
+{:index 396, :time 19242434542, :type :invoke, :process 105, :f :broadcast, :value 105}
+{:index 397, :time 19245915417, :type :info, :process 105, :f :broadcast, :value 105, :error [:crash "malformed message"]}
+{:index 398, :time 19250381709, :type :invoke, :process 106, :f :read, :value nil}
+{:index 399, :time 19251993917, :type :ok, :process 106, :f :read, :value []}
+{:index 400, :time 19256306834, :type :invoke, :process 106, :f :read, :value nil}
+{:index 401, :time 19257485375, :type :ok, :process 106, :f :read, :value []}
+{:index 402, :time 19358146875, :type :invoke, :process 106, :f :read, :value nil}
+{:index 403, :time 19360383292, :type :ok, :process 106, :f :read, :value []}
+{:index 404, :time 19447275459, :type :invoke, :process 106, :f :read, :value nil}
+{:index 405, :time 19449646042, :type :ok, :process 106, :f :read, :value []}
+{:index 406, :time 19573012292, :type :invoke, :process 106, :f :broadcast, :value 106}
+{:index 407, :time 19576552167, :type :info, :process 106, :f :broadcast, :value 106, :error [:crash "malformed message"]}
+{:index 408, :time 19757369875, :type :invoke, :process 107, :f :broadcast, :value 107}
+{:index 409, :time 19761318542, :type :info, :process 107, :f :broadcast, :value 107, :error [:crash "malformed message"]}
+{:index 410, :time 19919192542, :type :invoke, :process 108, :f :read, :value nil}
+{:index 411, :time 19922229000, :type :ok, :process 108, :f :read, :value []}
+{:index 412, :time 19942151375, :type :invoke, :process 108, :f :broadcast, :value 108}
+{:index 413, :time 19944889792, :type :info, :process 108, :f :broadcast, :value 108, :error [:crash "malformed message"]}
+{:index 414, :time 29947770875, :type :invoke, :process 109, :f :read, :value nil, :final? true}
+{:index 415, :time 29953219792, :type :ok, :process 109, :f :read, :value [], :final? true}

@@ -1,0 +1,247 @@
+2024-11-28 00:12:16,177{GMT}	INFO	[jepsen test runner] jepsen.core: Command line:
+lein run test -w broadcast --bin /Users/alex/.go/bin/maelstrom-broadcast --node-count 1 --time-limit 20 --rate 10
+2024-11-28 00:12:16,215{GMT}	INFO	[jepsen test runner] jepsen.core: Running test:
+{:args []
+ :remote
+ #jepsen.control.retry.Remote{:remote #jepsen.control.scp.Remote{:cmd-remote #jepsen.control.sshj.SSHJRemote{:concurrency-limit 6,
+                                                                                                             :conn-spec nil,
+                                                                                                             :client nil,
+                                                                                                             :semaphore nil},
+                                                                 :conn-spec nil},
+                              :conn nil}
+ :log-net-send false
+ :node-count 1
+ :availability nil
+ :max-txn-length 4
+ :concurrency 1
+ :db
+ #object[maelstrom.db$db$reify__16142
+         "0x3b42d7df"
+         "maelstrom.db$db$reify__16142@3b42d7df"]
+ :max-writes-per-key 16
+ :leave-db-running? false
+ :name "broadcast"
+ :logging-json? false
+ :start-time
+ #object[org.joda.time.DateTime "0x64b262a7" "2024-11-28T00:12:16.162-05:00"]
+ :nemesis-interval 10
+ :net
+ #object[maelstrom.net$jepsen_net$reify__15251
+         "0x771c4015"
+         "maelstrom.net$jepsen_net$reify__15251@771c4015"]
+ :client
+ #object[maelstrom.workload.broadcast$client$reify__16644
+         "0x34d776eb"
+         "maelstrom.workload.broadcast$client$reify__16644@34d776eb"]
+ :barrier
+ #object[java.util.concurrent.CyclicBarrier
+         "0x60a3a0fa"
+         "java.util.concurrent.CyclicBarrier@60a3a0fa"]
+ :log-stderr false
+ :pure-generators true
+ :ssh {:dummy? true}
+ :rate 10.0
+ :checker
+ #object[jepsen.checker$compose$reify__11881
+         "0x17734113"
+         "jepsen.checker$compose$reify__11881@17734113"]
+ :argv
+ ("test"
+  "-w"
+  "broadcast"
+  "--bin"
+  "/Users/alex/.go/bin/maelstrom-broadcast"
+  "--node-count"
+  "1"
+  "--time-limit"
+  "20"
+  "--rate"
+  "10")
+ :nemesis
+ (jepsen.nemesis.ReflCompose
+  {:fm {:start-partition 0,
+        :stop-partition 0,
+        :kill 1,
+        :start 1,
+        :pause 1,
+        :resume 1},
+   :nemeses [#unprintable "jepsen.nemesis.combined$partition_nemesis$reify__16416@27aa700"
+             #unprintable "jepsen.nemesis.combined$db_nemesis$reify__16397@d15f98a"]})
+ :nodes ["n0"]
+ :test-count 1
+ :latency {:mean 0, :dist :constant}
+ :bin "/Users/alex/.go/bin/maelstrom-broadcast"
+ :generator
+ ((jepsen.generator.Synchronize
+   {:gen (jepsen.generator.TimeLimit
+          {:limit 20000000000,
+           :cutoff nil,
+           :gen (jepsen.generator.Any
+                 {:gens [(jepsen.generator.OnThreads
+                          {:f #{:nemesis},
+                           :context-filter #object[jepsen.generator.context$make_thread_filter$lazy_filter__9167
+                                                   "0x9c88323"
+                                                   "jepsen.generator.context$make_thread_filter$lazy_filter__9167@9c88323"],
+                           :gen nil})
+                         (jepsen.generator.OnThreads
+                          {:f #jepsen.generator.context.AllBut{:element :nemesis},
+                           :context-filter #object[jepsen.generator.context$make_thread_filter$lazy_filter__9167
+                                                   "0x6d4bdb75"
+                                                   "jepsen.generator.context$make_thread_filter$lazy_filter__9167@6d4bdb75"],
+                           :gen (jepsen.generator.Stagger
+                                 {:dt 200000000,
+                                  :next-time nil,
+                                  :gen (jepsen.generator.Mix
+                                        {:i 1,
+                                         :gens [({:f :broadcast, :value 0}
+                                                 {:f :broadcast, :value 1}
+                                                 {:f :broadcast, :value 2}
+                                                 {:f :broadcast, :value 3}
+                                                 {:f :broadcast, :value 4}
+                                                 {:f :broadcast, :value 5}
+                                                 {:f :broadcast, :value 6}
+                                                 {:f :broadcast, :value 7}
+                                                 ...)
+                                                ({:f :read}
+                                                 {:f :read}
+                                                 {:f :read}
+                                                 {:f :read}
+                                                 {:f :read}
+                                                 {:f :read}
+                                                 {:f :read}
+                                                 {:f :read}
+                                                 ...)]})})})]})})})
+  (jepsen.generator.Synchronize
+   {:gen (jepsen.generator.OnThreads
+          {:f #{:nemesis},
+           :context-filter #object[jepsen.generator.context$make_thread_filter$lazy_filter__9167
+                                   "0x256a25a8"
+                                   "jepsen.generator.context$make_thread_filter$lazy_filter__9167@256a25a8"],
+           :gen ()})})
+  (jepsen.generator.Synchronize
+   {:gen {:type :log, :value "Waiting for recovery..."}})
+  (jepsen.generator.Synchronize {:gen {:type :sleep, :value 10}})
+  (jepsen.generator.Synchronize
+   {:gen (jepsen.generator.OnThreads
+          {:f #jepsen.generator.context.AllBut{:element :nemesis},
+           :context-filter #object[jepsen.generator.context$make_thread_filter$lazy_filter__9167
+                                   "0x68f67bbd"
+                                   "jepsen.generator.context$make_thread_filter$lazy_filter__9167@68f67bbd"],
+           :gen (jepsen.generator.EachThread
+                 {:fresh-gen {:f :read, :final? true},
+                  :context-filters #object[clojure.core$promise$reify__8591
+                                           "0x5bd585a5"
+                                           {:status :pending, :val nil}],
+                  :gens {}})})}))
+ :log-net-recv false
+ :os
+ #object[maelstrom.net$jepsen_os$reify__15254
+         "0x65c040c9"
+         "maelstrom.net$jepsen_os$reify__15254@65c040c9"]
+ :time-limit 20
+ :workload :broadcast
+ :consistency-models [:strict-serializable]
+ :topology :grid}
+
+2024-11-28 00:12:16,984{GMT}	INFO	[jepsen node n0] maelstrom.net: Starting Maelstrom network
+2024-11-28 00:12:16,985{GMT}	INFO	[jepsen test runner] jepsen.db: Tearing down DB
+2024-11-28 00:12:16,985{GMT}	INFO	[jepsen test runner] jepsen.db: Setting up DB
+2024-11-28 00:12:16,986{GMT}	INFO	[jepsen node n0] maelstrom.service: Starting services: (lin-kv lin-tso lww-kv seq-kv)
+2024-11-28 00:12:16,987{GMT}	INFO	[jepsen node n0] maelstrom.db: Setting up n0
+2024-11-28 00:12:16,987{GMT}	INFO	[jepsen node n0] maelstrom.process: launching /Users/alex/.go/bin/maelstrom-broadcast []
+2024-11-28 00:12:17,179{GMT}	INFO	[jepsen test runner] jepsen.core: Relative time begins now
+2024-11-28 00:12:17,189{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:read	nil
+2024-11-28 00:12:17,191{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:ok	:read	nil
+2024-11-28 00:12:17,363{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:invoke	:broadcast	0
+2024-11-28 00:12:17,376{GMT}	INFO	[jepsen worker 0] jepsen.util: 0	:info	:broadcast	0	[:crash "malformed message"]
+2024-11-28 00:12:17,536{GMT}	INFO	[jepsen worker 0] jepsen.util: 1	:invoke	:broadcast	1
+2024-11-28 00:12:17,539{GMT}	INFO	[jepsen worker 0] jepsen.util: 1	:info	:broadcast	1	[:crash "malformed message"]
+2024-11-28 00:12:17,545{GMT}	INFO	[jepsen worker 0] jepsen.util: 2	:invoke	:read	nil
+2024-11-28 00:12:17,547{GMT}	INFO	[jepsen worker 0] jepsen.util: 2	:ok	:read	nil
+2024-11-28 00:12:17,716{GMT}	INFO	[jepsen worker 0] jepsen.util: 2	:invoke	:broadcast	2
+2024-11-28 00:12:17,720{GMT}	INFO	[jepsen worker 0] jepsen.util: 2	:info	:broadcast	2	[:crash "malformed message"]
+2024-11-28 00:12:17,721{GMT}	INFO	[jepsen worker 0] jepsen.util: 3	:invoke	:broadcast	3
+2024-11-28 00:12:17,723{GMT}	INFO	[jepsen worker 0] jepsen.util: 3	:info	:broadcast	3	[:crash "malformed message"]
+2024-11-28 00:12:17,745{GMT}	INFO	[jepsen worker 0] jepsen.util: 4	:invoke	:broadcast	4
+2024-11-28 00:12:17,746{GMT}	INFO	[jepsen worker 0] jepsen.util: 4	:info	:broadcast	4	[:crash "malformed message"]
+2024-11-28 00:12:17,779{GMT}	INFO	[jepsen worker 0] jepsen.util: 5	:invoke	:read	nil
+2024-11-28 00:12:17,780{GMT}	INFO	[jepsen worker 0] jepsen.util: 5	:ok	:read	nil
+2024-11-28 00:12:17,979{GMT}	INFO	[jepsen worker 0] jepsen.util: 5	:invoke	:broadcast	5
+2024-11-28 00:12:17,982{GMT}	INFO	[jepsen worker 0] jepsen.util: 5	:info	:broadcast	5	[:crash "malformed message"]
+2024-11-28 00:12:18,152{GMT}	INFO	[jepsen worker 0] jepsen.util: 6	:invoke	:read	nil
+2024-11-28 00:12:18,154{GMT}	INFO	[jepsen worker 0] jepsen.util: 6	:ok	:read	nil
+2024-11-28 00:12:18,283{GMT}	INFO	[jepsen worker 0] jepsen.util: 6	:invoke	:read	nil
+2024-11-28 00:12:18,284{GMT}	INFO	[jepsen worker 0] jepsen.util: 6	:ok	:read	nil
+2024-11-28 00:12:18,378{GMT}	INFO	[jepsen worker 0] jepsen.util: 6	:invoke	:broadcast	6
+2024-11-28 00:12:18,380{GMT}	INFO	[jepsen worker 0] jepsen.util: 6	:info	:broadcast	6	[:crash "malformed message"]
+2024-11-28 00:12:18,463{GMT}	INFO	[jepsen worker 0] jepsen.util: 7	:invoke	:broadcast	7
+2024-11-28 00:12:18,464{GMT}	INFO	[jepsen worker 0] jepsen.util: 7	:info	:broadcast	7	[:crash "malformed message"]
+2024-11-28 00:12:18,524{GMT}	INFO	[jepsen worker 0] jepsen.util: 8	:invoke	:read	nil
+2024-11-28 00:12:18,525{GMT}	INFO	[jepsen worker 0] jepsen.util: 8	:ok	:read	nil
+2024-11-28 00:12:18,626{GMT}	INFO	[jepsen worker 0] jepsen.util: 8	:invoke	:read	nil
+2024-11-28 00:12:18,627{GMT}	INFO	[jepsen worker 0] jepsen.util: 8	:ok	:read	nil
+2024-11-28 00:12:18,742{GMT}	INFO	[jepsen worker 0] jepsen.util: 8	:invoke	:broadcast	8
+2024-11-28 00:12:18,743{GMT}	INFO	[jepsen worker 0] jepsen.util: 8	:info	:broadcast	8	[:crash "malformed message"]
+2024-11-28 00:12:18,932{GMT}	INFO	[jepsen worker 0] jepsen.util: 9	:invoke	:read	nil
+2024-11-28 00:12:18,934{GMT}	INFO	[jepsen worker 0] jepsen.util: 9	:ok	:read	nil
+2024-11-28 00:12:18,987{GMT}	INFO	[jepsen worker 0] jepsen.util: 9	:invoke	:broadcast	9
+2024-11-28 00:12:18,989{GMT}	INFO	[jepsen worker 0] jepsen.util: 9	:info	:broadcast	9	[:crash "malformed message"]
+2024-11-28 00:12:18,991{GMT}	INFO	[jepsen worker 0] jepsen.util: 10	:invoke	:read	nil
+2024-11-28 00:12:18,992{GMT}	INFO	[jepsen worker 0] jepsen.util: 10	:ok	:read	nil
+2024-11-28 00:12:19,157{GMT}	INFO	[jepsen worker 0] jepsen.util: 10	:invoke	:read	nil
+2024-11-28 00:12:19,159{GMT}	INFO	[jepsen worker 0] jepsen.util: 10	:ok	:read	nil
+2024-11-28 00:12:19,254{GMT}	INFO	[jepsen worker 0] jepsen.util: 10	:invoke	:broadcast	10
+2024-11-28 00:12:19,256{GMT}	INFO	[jepsen worker 0] jepsen.util: 10	:info	:broadcast	10	[:crash "malformed message"]
+2024-11-28 00:12:19,440{GMT}	INFO	[jepsen worker 0] jepsen.util: 11	:invoke	:broadcast	11
+2024-11-28 00:12:19,443{GMT}	INFO	[jepsen worker 0] jepsen.util: 11	:info	:broadcast	11	[:crash "malformed message"]
+2024-11-28 00:12:19,606{GMT}	INFO	[jepsen worker 0] jepsen.util: 12	:invoke	:broadcast	12
+2024-11-28 00:12:19,607{GMT}	INFO	[jepsen worker 0] jepsen.util: 12	:info	:broadcast	12	[:crash "malformed message"]
+2024-11-28 00:12:19,729{GMT}	INFO	[jepsen worker 0] jepsen.util: 13	:invoke	:broadcast	13
+2024-11-28 00:12:19,730{GMT}	INFO	[jepsen worker 0] jepsen.util: 13	:info	:broadcast	13	[:crash "malformed message"]
+2024-11-28 00:12:19,811{GMT}	INFO	[jepsen worker 0] jepsen.util: 14	:invoke	:read	nil
+2024-11-28 00:12:19,812{GMT}	INFO	[jepsen worker 0] jepsen.util: 14	:ok	:read	nil
+2024-11-28 00:12:19,825{GMT}	INFO	[jepsen worker 0] jepsen.util: 14	:invoke	:broadcast	14
+2024-11-28 00:12:19,826{GMT}	INFO	[jepsen worker 0] jepsen.util: 14	:info	:broadcast	14	[:crash "malformed message"]
+2024-11-28 00:12:19,840{GMT}	INFO	[jepsen worker 0] jepsen.util: 15	:invoke	:broadcast	15
+2024-11-28 00:12:19,841{GMT}	INFO	[jepsen worker 0] jepsen.util: 15	:info	:broadcast	15	[:crash "malformed message"]
+2024-11-28 00:12:19,980{GMT}	INFO	[jepsen worker 0] jepsen.util: 16	:invoke	:read	nil
+2024-11-28 00:12:19,980{GMT}	INFO	[jepsen worker 0] jepsen.util: 16	:ok	:read	nil
+2024-11-28 00:12:19,999{GMT}	INFO	[jepsen worker 0] jepsen.util: 16	:invoke	:broadcast	16
+2024-11-28 00:12:20,000{GMT}	INFO	[jepsen worker 0] jepsen.util: 16	:info	:broadcast	16	[:crash "malformed message"]
+2024-11-28 00:12:20,081{GMT}	INFO	[jepsen worker 0] jepsen.util: 17	:invoke	:broadcast	17
+2024-11-28 00:12:20,082{GMT}	INFO	[jepsen worker 0] jepsen.util: 17	:info	:broadcast	17	[:crash "malformed message"]
+2024-11-28 00:12:20,117{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:invoke	:broadcast	18
+2024-11-28 00:12:20,118{GMT}	INFO	[jepsen worker 0] jepsen.util: 18	:info	:broadcast	18	[:crash "malformed message"]
+2024-11-28 00:12:20,255{GMT}	INFO	[jepsen worker 0] jepsen.util: 19	:invoke	:read	nil
+2024-11-28 00:12:20,256{GMT}	INFO	[jepsen worker 0] jepsen.util: 19	:ok	:read	nil
+2024-11-28 00:12:20,423{GMT}	INFO	[jepsen worker 0] jepsen.util: 19	:invoke	:broadcast	19
+2024-11-28 00:12:20,426{GMT}	INFO	[jepsen worker 0] jepsen.util: 19	:info	:broadcast	19	[:crash "malformed message"]
+2024-11-28 00:12:20,436{GMT}	INFO	[jepsen worker 0] jepsen.util: 20	:invoke	:broadcast	20
+2024-11-28 00:12:20,438{GMT}	INFO	[jepsen worker 0] jepsen.util: 20	:info	:broadcast	20	[:crash "malformed message"]
+2024-11-28 00:12:20,517{GMT}	INFO	[jepsen worker 0] jepsen.util: 21	:invoke	:broadcast	21
+2024-11-28 00:12:20,518{GMT}	INFO	[jepsen worker 0] jepsen.util: 21	:info	:broadcast	21	[:crash "malformed message"]
+2024-11-28 00:12:20,529{GMT}	INFO	[jepsen worker 0] jepsen.util: 22	:invoke	:broadcast	22
+2024-11-28 00:12:20,529{GMT}	INFO	[jepsen worker 0] jepsen.util: 22	:info	:broadcast	22	[:crash "malformed message"]
+2024-11-28 00:12:20,610{GMT}	INFO	[jepsen worker 0] jepsen.util: 23	:invoke	:broadcast	23
+2024-11-28 00:12:20,611{GMT}	INFO	[jepsen worker 0] jepsen.util: 23	:info	:broadcast	23	[:crash "malformed message"]
+2024-11-28 00:12:20,778{GMT}	INFO	[jepsen worker 0] jepsen.util: 24	:invoke	:broadcast	24
+2024-11-28 00:12:20,781{GMT}	INFO	[jepsen worker 0] jepsen.util: 24	:info	:broadcast	24	[:crash "malformed message"]
+2024-11-28 00:12:20,923{GMT}	INFO	[jepsen worker 0] jepsen.util: 25	:invoke	:read	nil
+2024-11-28 00:12:20,926{GMT}	INFO	[jepsen worker 0] jepsen.util: 25	:ok	:read	nil
+2024-11-28 00:12:20,926{GMT}	INFO	[jepsen worker 0] jepsen.util: 25	:invoke	:broadcast	25
+2024-11-28 00:12:20,928{GMT}	INFO	[jepsen worker 0] jepsen.util: 25	:info	:broadcast	25	[:crash "malformed message"]
+2024-11-28 00:12:21,081{GMT}	INFO	[jepsen worker 0] jepsen.util: 26	:invoke	:broadcast	26
+2024-11-28 00:12:21,084{GMT}	INFO	[jepsen worker 0] jepsen.util: 26	:info	:broadcast	26	[:crash "malformed message"]
+2024-11-28 00:12:21,110{GMT}	INFO	[jepsen worker 0] jepsen.util: 27	:invoke	:read	nil
+2024-11-28 00:12:21,111{GMT}	INFO	[jepsen worker 0] jepsen.util: 27	:ok	:read	nil
+2024-11-28 00:12:21,304{GMT}	INFO	[jepsen worker 0] jepsen.util: 27	:invoke	:broadcast	27
+2024-11-28 00:12:21,305{GMT}	INFO	[jepsen worker 0] jepsen.util: 27	:info	:broadcast	27	[:crash "malformed message"]
+2024-11-28 00:12:21,438{GMT}	INFO	[jepsen worker 0] jepsen.util: 28	:invoke	:read	nil
+2024-11-28 00:12:21,439{GMT}	INFO	[jepsen worker 0] jepsen.util: 28	:ok	:read	nil
+2024-11-28 00:12:21,521{GMT}	INFO	[jepsen worker 0] jepsen.util: 28	:invoke	:read	nil
+2024-11-28 00:12:21,522{GMT}	INFO	[jepsen worker 0] jepsen.util: 28	:ok	:read	nil
+2024-11-28 00:12:21,688{GMT}	INFO	[jepsen worker 0] jepsen.util: 28	:invoke	:read	nil
+2024-11-28 00:12:21,690{GMT}	INFO	[jepsen worker 0] jepsen.util: 28	:ok	:read	nil
+2024-11-28 00:12:21,863{GMT}	INFO	[jepsen worker 0] jepsen.util: 28	:invoke	:broadcast	28
+2024-11-28 00:12:21,867{GMT}	INFO	[jepsen worker 0] jepsen.util: 28	:info	:broadcast	28	[:crash "malformed message"]
+2024-11-28 00:12:21,943{GMT}	INFO	[Jepsen shutdown hook] jepsen.core: Downloading DB logs before JVM shutdown...
