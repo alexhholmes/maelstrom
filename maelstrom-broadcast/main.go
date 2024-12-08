@@ -23,7 +23,6 @@ func main() {
 }
 
 type Server struct {
-	mu         sync.RWMutex
 	node       *maelstrom.Node
 	broadcasts Broadcasts
 	topology   atomic.Pointer[map[string][]string]
@@ -95,9 +94,6 @@ func (s *Server) HandleBroadcast() func(msg maelstrom.Message) error {
 
 func (s *Server) HandleRead() func(msg maelstrom.Message) error {
 	return func(msg maelstrom.Message) error {
-		s.mu.RLock()
-		defer s.mu.RUnlock()
-
 		return s.node.Reply(msg, map[string]any{
 			"type":     "read_ok",
 			"messages": s.broadcasts.Read(),
