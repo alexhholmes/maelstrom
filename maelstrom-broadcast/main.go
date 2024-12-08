@@ -25,7 +25,7 @@ func main() {
 type Server struct {
 	node       *maelstrom.Node
 	broadcasts Broadcasts
-	topology   atomic.Pointer[map[string][]string]
+	neighbors  atomic.Pointer[[]string]
 }
 
 func NewServer(node *maelstrom.Node) *Server {
@@ -36,12 +36,6 @@ func NewServer(node *maelstrom.Node) *Server {
 			cached:     make([]int, 0),
 		},
 	}
-
-	go func() {
-		// Background thread that propagates broadcasts through gossip protocol
-
-	}()
-
 	return server
 }
 
@@ -51,14 +45,16 @@ type Broadcasts struct {
 	cached     []int
 }
 
-func (b *Broadcasts) Add(message int) {
+func (b *Broadcasts) Add(message int) bool {
 	b.mu.Lock()
 	defer b.mu.Unlock()
 
 	if _, ok := b.broadcasts[message]; !ok {
 		b.broadcasts[message] = struct{}{}
 		b.cached = append(b.cached, message)
+		return true
 	}
+	return false
 }
 
 func (b *Broadcasts) Read() []int {
@@ -84,7 +80,27 @@ func (s *Server) HandleBroadcast() func(msg maelstrom.Message) error {
 			return err
 		}
 
-		s.broadcasts.Add(body.Message)
+		if ok := s.broadcasts.Add(body.Message); !ok {
+			return s.node.Reply(msg, map[string]any{
+				"type": "broadcast_ok",
+			})
+		}
+
+		neighbors := s.neighbors.Load()
+		if neighbors != nil {
+			payload := Message{
+				Type:    "broadcast",
+				Message: body.Message,
+			}
+
+			for _, neighbor := range *neighbors {
+				if neighbor != msg.Src {
+					if err := s.node.Send(neighbor, payload); err != nil {
+						return err
+					}
+				}
+			}
+		}
 
 		return s.node.Reply(msg, map[string]any{
 			"type": "broadcast_ok",
@@ -108,8 +124,9 @@ func (s *Server) HandleTopology() func(msg maelstrom.Message) error {
 			return err
 		}
 
-		if s.topology.Load() == nil {
-			s.topology.CompareAndSwap(nil, &body.Topology)
+		if s.neighbors.Load() == nil {
+			neighbors := body.Topology[s.node.ID()]
+			s.neighbors.CompareAndSwap(nil, &neighbors)
 		}
 
 		return s.node.Reply(msg, map[string]any{
