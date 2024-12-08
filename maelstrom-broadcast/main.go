@@ -3,17 +3,15 @@ package main
 import (
 	"encoding/json"
 	"log"
+	"sync"
+	"sync/atomic"
 
 	maelstrom "github.com/jepsen-io/maelstrom/demo/go"
 )
 
 func main() {
 	n := maelstrom.NewNode()
-
-	s := Server{
-		node:   n,
-		unique: make(map[int]struct{}),
-	}
+	s := NewServer(n)
 
 	n.Handle("broadcast", s.HandleBroadcast())
 	n.Handle("read", s.HandleRead())
@@ -25,26 +23,69 @@ func main() {
 }
 
 type Server struct {
+	mu         sync.RWMutex
 	node       *maelstrom.Node
-	unique     map[int]struct{}
-	broadcasts []int
+	broadcasts Broadcasts
+	topology   atomic.Pointer[map[string][]string]
 }
 
-type BroadcastMessage struct {
-	Message int `json:"message"`
+func NewServer(node *maelstrom.Node) *Server {
+	server := &Server{
+		node: node,
+		broadcasts: Broadcasts{
+			broadcasts: make(map[int]struct{}),
+			cached:     make([]int, 0),
+		},
+	}
+
+	go func() {
+		// Background thread that propagates broadcasts through gossip protocol
+
+	}()
+
+	return server
+}
+
+type Broadcasts struct {
+	mu         sync.RWMutex
+	broadcasts map[int]struct{}
+	cached     []int
+}
+
+func (b *Broadcasts) Add(message int) {
+	b.mu.Lock()
+	defer b.mu.Unlock()
+
+	if _, ok := b.broadcasts[message]; !ok {
+		b.broadcasts[message] = struct{}{}
+		b.cached = append(b.cached, message)
+	}
+}
+
+func (b *Broadcasts) Read() []int {
+	b.mu.RLock()
+	defer b.mu.RUnlock()
+
+	broadcasts := make([]int, len(b.cached))
+	copy(broadcasts, b.cached)
+
+	return broadcasts
+}
+
+type Message struct {
+	Type     string              `json:"type"`
+	Message  int                 `json:"message,omitempty"`
+	Topology map[string][]string `json:"topology,omitempty"`
 }
 
 func (s *Server) HandleBroadcast() func(msg maelstrom.Message) error {
 	return func(msg maelstrom.Message) error {
-		var body BroadcastMessage
+		var body Message
 		if err := json.Unmarshal(msg.Body, &body); err != nil {
 			return err
 		}
 
-		if _, ok := s.unique[body.Message]; !ok {
-			s.unique[body.Message] = struct{}{}
-			s.broadcasts = append(s.broadcasts, body.Message)
-		}
+		s.broadcasts.Add(body.Message)
 
 		return s.node.Reply(msg, map[string]any{
 			"type": "broadcast_ok",
@@ -54,15 +95,27 @@ func (s *Server) HandleBroadcast() func(msg maelstrom.Message) error {
 
 func (s *Server) HandleRead() func(msg maelstrom.Message) error {
 	return func(msg maelstrom.Message) error {
+		s.mu.RLock()
+		defer s.mu.RUnlock()
+
 		return s.node.Reply(msg, map[string]any{
 			"type":     "read_ok",
-			"messages": s.broadcasts,
+			"messages": s.broadcasts.Read(),
 		})
 	}
 }
 
 func (s *Server) HandleTopology() func(msg maelstrom.Message) error {
 	return func(msg maelstrom.Message) error {
+		var body Message
+		if err := json.Unmarshal(msg.Body, &body); err != nil {
+			return err
+		}
+
+		if s.topology.Load() == nil {
+			s.topology.CompareAndSwap(nil, &body.Topology)
+		}
+
 		return s.node.Reply(msg, map[string]any{
 			"type": "topology_ok",
 		})
